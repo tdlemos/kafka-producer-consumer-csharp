@@ -19,7 +19,7 @@ Next we’ll create two different C# project files, one for the producer and one
 
 Copy the following into a project file named producer.csproj in the producer subdirectory:
 
-'''xml
+```xml
 
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -35,4 +35,4 @@ Copy the following into a project file named producer.csproj in the producer sub
 
 </Project>
 
-'''
+```
