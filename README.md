@@ -1,4 +1,4 @@
-# .NET 8 Kafka - Producer & consumer
+# .NET 8 Kafka - Producer & Consumer
 
 In this example, you will build C# client applications which produce and consume messages from an Apache Kafka® cluster.
 
@@ -183,5 +183,36 @@ You can test the syntax before preceding by compiling with:
 cd ../consumer
 dotnet build consumer.csproj
 cd ..
+
+```
+
+## Produce Events
+
+The **dotnet** command line tool gives us a handy **run** command we can use to execute the programs we just built.
+
+In order to run the producer, use the **dotnet run** command:
+
+```cmd
+
+cd producer
+dotnet run
+
+```
+
+You should see output resembling this:
+
+```console
+
+Produced event to topic purchases: key = jsmith     value = alarm clock
+Produced event to topic purchases: key = htanaka    value = book
+Produced event to topic purchases: key = eabara     value = batteries
+Produced event to topic purchases: key = htanaka    value = t-shirts
+Produced event to topic purchases: key = htanaka    value = t-shirts
+Produced event to topic purchases: key = htanaka    value = gift card
+Produced event to topic purchases: key = sgarcia    value = gift card
+Produced event to topic purchases: key = jbernard   value = gift card
+Produced event to topic purchases: key = awalther   value = alarm clock
+Produced event to topic purchases: key = htanaka    value = book
+10 events were produced to topic purchases
 
 ```
