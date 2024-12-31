@@ -216,3 +216,35 @@ Produced event to topic purchases: key = htanaka    value = book
 10 events were produced to topic purchases
 
 ```
+
+## Consume Events
+
+From another terminal, run the following command to run the consumer application which will read the events from the **purchases** topic and write the information to the terminal.
+
+```cmd
+
+cd consumer
+dotnet run
+
+```
+
+The consumer application will start and print any events it has not yet consumed and then wait for more events to arrive. On startup of the consumer, you should see output resembling this:
+
+```console
+
+Consumed event from topic purchases: key = jsmith     value = alarm clock
+Consumed event from topic purchases: key = htanaka    value = book
+Consumed event from topic purchases: key = eabara     value = batteries
+Consumed event from topic purchases: key = htanaka    value = t-shirts
+Consumed event from topic purchases: key = htanaka    value = t-shirts
+Consumed event from topic purchases: key = htanaka    value = gift card
+Consumed event from topic purchases: key = sgarcia    value = gift card
+Consumed event from topic purchases: key = jbernard   value = gift card
+Consumed event from topic purchases: key = awalther   value = alarm clock
+Consumed event from topic purchases: key = htanaka    value = book
+
+```
+
+Rerun the producer to see more events, or feel free to modify the code as necessary to create more or different events.
+
+Once you are done with the consumer, enter **Ctrl-C** to terminate the consumer application.
